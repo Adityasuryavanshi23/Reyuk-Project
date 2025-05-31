@@ -39,9 +39,8 @@ function App() {
         </div>
         <div className="col-span-2 max-[910px]:col-span-3  ">
           <Header
-            activeEffect={activeEffect}
-            setactiveEffect={setactiveEffect}
             setActiveTab={setActiveTab}
+            activeTab={activeTab}
             setOpenSidebar={setOpenSidebar}
           />
         </div>

@@ -3,12 +3,7 @@ import { AvatarLayout } from "./AvatarLayout";
 import profileImage from "../assets/images/profile-image.png";
 import share from "../assets/logos/share-logo.png";
 
-export const Header = ({
-  activeEffect,
-  setactiveEffect,
-  setActiveTab,
-  setOpenSidebar,
-}) => {
+export const Header = ({ setActiveTab, setOpenSidebar, activeTab }) => {
   return (
     <div className="dark:text-white  capitalize mt-4 mx-4">
       {/* top header */}
@@ -61,7 +56,6 @@ export const Header = ({
       <div className=" mt-1 flex px-12 py-2 dark:bg-[#0B0B0E] bg-gray-300 rounded-bl-[24px] rounded-br-[24px]">
         <div
           onClick={() => {
-            setactiveEffect("chat");
             setActiveTab("chat");
           }}
           className="flex flex-col relative items-center justify-center cursor-pointer group px-4"
@@ -70,14 +64,13 @@ export const Header = ({
             <MessageSquare
               size={15}
               className={` ${
-                activeEffect === "chat"
+                activeTab === "chat"
                   ? "dark:text-[#9145F4] text-gray-700"
                   : "dark:group-hover:text-[#9145F4] group-hover-text-gray-700"
               }  group-hover:drop-shadow-[0_1px_8px_#ffffff] transition-colors duration-200 text-[#808094]`}
             />
             <span
               onClick={() => {
-                setactiveEffect("chat");
                 setActiveTab("chat");
               }}
               className={`text-sm max font-medium cursor-pointer py-2 `}
@@ -87,7 +80,7 @@ export const Header = ({
           </p>
           <div
             className={`h-[3px] w-20 absolute bottom-[-8px] rounded-full mt-2 transition-all duration-200 ${
-              activeEffect === "chat"
+              activeTab === "chat"
                 ? "dark:bg-[#9145F4] bg-gray-700"
                 : "bg-transparent dark:group-hover:bg-[#9145F4] group-hover:bg-gray-700"
             }`}
@@ -95,7 +88,6 @@ export const Header = ({
         </div>
         <div
           onClick={() => {
-            setactiveEffect("library");
             setActiveTab("library");
           }}
           className="flex flex-col relative items-center justify-center cursor-pointer group px-4"
@@ -104,14 +96,13 @@ export const Header = ({
             <Folder
               size={15}
               className={` ${
-                activeEffect === "library"
+                activeTab === "library"
                   ? "dark:text-[#9145F4] text-gray-700"
                   : "dark:group-hover:text-[#9145F4] group-hover-text-gray-700"
               }  group-hover:drop-shadow-[0_1px_8px_#ffffff] transition-colors duration-200 text-[#808094]`}
             />
             <span
               onClick={() => {
-                setactiveEffect("library");
                 setActiveTab("library");
               }}
               className={`text-sm font-medium cursor-pointer py-2 `}
@@ -121,7 +112,7 @@ export const Header = ({
           </p>
           <div
             className={`h-[3px] w-20 absolute bottom-[-8px] rounded-full mt-2 transition-all duration-200 ${
-              activeEffect === "library"
+              activeTab === "library"
                 ? "dark:bg-[#9145F4] bg-gray-700"
                 : "bg-transparent dark:group-hover:bg-[#9145F4] group-hover:bg-gray-700"
             }`}
