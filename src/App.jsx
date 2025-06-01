@@ -3,9 +3,9 @@ import { Header, SideBar, ChatTab, LibraryTab } from "./components";
 import "./App.css";
 
 function App() {
-  const [activeEffect, setactiveEffect] = useState("chat");
-  const [activeTab, setActiveTab] = useState("chat");
   const [opensidebar, setOpenSidebar] = useState(false);
+  const [activeEffect, setactiveEffect] = useState("");
+  const [activeTab, setActiveTab] = useState("chat");
 
   const active =
     " border-l-4  border-gray-900 dark:border-[#9145F4] dark:bg-gradient-to-r dark:from-[#9145F4]/20 dark:to-[#D9C9FD00]/10 bg-gradient-to-r from-gray-500/70 to-gray-600/30 text-gray-200 ";

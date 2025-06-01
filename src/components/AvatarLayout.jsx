@@ -30,11 +30,7 @@ export const AvatarLayout = () => {
     <>
       <div className=" flex items-center ">
         {avatar.map((item, index) => (
-          <div
-            className={`relative -ml-2 ${index === 0 ? "ml-0" : ""} z-${
-              10 + index * 7
-            }`}
-          >
+          <div className={`relative -ml-2  z-${16 + index * 10}`}>
             <img
               src={item.img}
               alt={`img${item.id}`}
